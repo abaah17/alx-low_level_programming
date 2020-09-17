@@ -12,15 +12,19 @@
 int main(void)
 {
 	char alphabet;
-	for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
+
+	for (alphabet = 'a' ; alphabet <= 'z' ; alphabet++)
 	{
-		if (alphabet == 'q' || alphabet == 'e') {
+		if (alphabet == 'q' || alphabet == 'e')
+		{
 			continue;
 		}
-		else{
+		else
+		{
 			putchar(alphabet);
 		}
 	}
+
 	putchar('\n');
 	return (0);
 }
