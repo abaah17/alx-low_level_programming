@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * times_table - prints the 9 table
+ * times_table - from 0-9
  *
- *  Description: prints all the nine table
+ * Description: prints all the nine table
  * Return: Always (0).
  */
 
