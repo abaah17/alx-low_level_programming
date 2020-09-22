@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char word[9] = "Holberton";
+	char word[10] = "Holberton";
 	int i = 0;
 
 	while (i < 9)
