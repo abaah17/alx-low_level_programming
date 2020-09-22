@@ -5,7 +5,6 @@
  *
  *
  */
-
 void print_alphabet_x10(void)
 {
 	char start_alphabet = 'a', end_alphabet;
@@ -18,6 +17,6 @@ void print_alphabet_x10(void)
 			end_alphabet++;
 		}
 		_putchar('\n');
-		start_alphabet++ ;
+		start_alphabet++;
 	}
 }
