@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * print_alphabet - prints all aphabets in lowercase
  *                  10X
@@ -16,7 +17,7 @@ void print_alphabet_x10(void)
 			_putchar(end_alphabet);
 			end_alphabet++;
 		}
-		_putchar('\n');
 		start_alphabet++;
+		_putchar('\n');
 	}
 }
