@@ -1,13 +1,14 @@
 #include "holberton.h"
 /**
- * _isupper - checks if the parameter is uppercase
- * @c: character to be checked by function
- * Description:
+ * _isupper - returns 1 or 0 based on input
+ * @c: first parameter
+ *
+ * Description: checks if a character is uppercase
  * Return: Always(0) Success
  */
 int _isupper(int c)
 {
-	if (c <= 'Z' && c >= 'A')
+	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
 	}
@@ -15,4 +16,5 @@ int _isupper(int c)
 	{
 		return (0);
 	}
+	return (0);
 }
