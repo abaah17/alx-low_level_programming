@@ -8,8 +8,9 @@
 int main(void)
 {
 	long first_number = 1, second_number = 2, next_number;
+	int i;
 
-	for (int i = 0; i < 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		if (i == 49)
 		{
