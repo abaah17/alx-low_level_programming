@@ -1,0 +1,7 @@
+#ifndef ALX_HOLBERTON_HOLBERTON_H
+#define ALX_HOLBERTON_HOLBERTON_H
+
+int _isupper(int c);
+
+#endif //ALX_HOLBERTON_HOLBERTON_H
+
