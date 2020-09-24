@@ -9,7 +9,7 @@ int main(void)
 {
 	long first_number = 0, second_number = 1, next_number;
 	long even_sum = 0, max = 4000000;
-	int i;
+	long i;
 
 	for (i = 0; i < max; i++)
 	{
