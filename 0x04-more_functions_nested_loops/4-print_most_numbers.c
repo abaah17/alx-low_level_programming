@@ -14,8 +14,8 @@ void print_most_numbers(void)
 			i = i + 1;
 			continue;
 		}
-		putchar(i + '0');
+		_putchar(i + '0');
 		i++;
 	} while (i < 10);
-	putchar('\n');
+	_putchar('\n');
 }
