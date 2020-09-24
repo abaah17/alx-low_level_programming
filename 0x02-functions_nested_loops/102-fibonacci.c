@@ -10,10 +10,17 @@ int main(void)
 
 	for (int i = 0; i < 50; i++)
 	{
-		printf("%lu, ", first_number);
-		next_number = second_number + first_number;
-		first_number = second_number;
-		second_number = next_number;
+		if (i == 49)
+		{
+			printf("%lu", first_number);
+		}
+		else
+		{
+			printf("%lu, ", first_number);
+			next_number = second_number + first_number;
+			first_number = second_number;
+			second_number = next_number;
+		}
 	}
 	printf("\n");
 	return (0);
