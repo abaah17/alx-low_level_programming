@@ -1,8 +1,8 @@
 #include "holberton.h"
 /**
- * more_numbers - prints numbers from 0-9
- * except 2 and 4
- * Return: Always(0) Success
+ * more_numbers - Prints numbers from 0 to 14, 10 times
+ *
+ * Return: void
  */
 void more_numbers(void)
 {
@@ -23,5 +23,4 @@ void more_numbers(void)
 		_putchar('\n');
 		i++;
 	}
-	_putchar('\n');
 }
