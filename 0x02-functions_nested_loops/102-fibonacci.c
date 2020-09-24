@@ -6,17 +6,14 @@
  */
 int main(void)
 {
-	int i;
-	int index_1 = 1;
-	int index_2 = 2;
-	int next_index;
+	long first_number = 1, second_number = 2, next_number;
 
-	for (i = 1; i <= 50; ++i)
+	for (int i = 0; i < 50; i++)
 	{
-		printf("%d, ", index_1);
-		next_index = index_1 + index_2;
-		index_1 = index_2;
-		index_2 = next_index;
+		printf("%lu, ", first_number);
+		next_number = second_number + first_number;
+		first_number = second_number;
+		second_number = next_number;
 	}
 	printf("\n");
 	return (0);
