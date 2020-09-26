@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	int i;
+	int i, end = 101;
 
-	for (i = 1; i < 101; i++)
+	for (i = 1; i < end; i++)
 	{
 		if (i % 15 == 0)
 		{
