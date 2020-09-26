@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	int i, end = 101;
+	int i, end = 99;
 
-	for (i = 1; i < end; i++)
+	for (i = 1; i <= end; i++)
 	{
 		if (i % 15 == 0)
 		{
@@ -29,6 +29,6 @@ int main(void)
 			printf("%d ", i);
 		}
 	}
-	printf("\n");
+	printf("Buzz\n");
 	return (0);
 }
