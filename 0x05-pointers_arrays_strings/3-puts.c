@@ -6,13 +6,10 @@
  */
 void _puts(char *str)
 {
-	for (int i = 0; str[i] != '\0'; ++i)
+	while (*str)
 	{
-		if (str[i] == '\0')
-		{
-			break;
-		}
-		_putchar(str[i]);
+		_putchar(*str);
+		str++;
 	}
 	_putchar('\n');
 }
