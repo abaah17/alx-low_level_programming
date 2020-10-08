@@ -6,10 +6,8 @@ include "holberton.h"
  */
 void _puts(char *str)
 {
-	while (*str)
+	for (int i = 0; str[i] != '\0'; ++i)
 	{
-		_putchar(*str);
-		str++;
+		_putchar(str[i]);
 	}
-	_putchar('\n');
 }
