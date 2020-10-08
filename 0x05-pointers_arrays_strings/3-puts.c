@@ -6,8 +6,12 @@
  */
 void _puts(char *str)
 {
-	for (int i = 0; str[i] != '\0'; ++i)
+	for (int i = 0; str[i] != '\0'; i++)
 	{
+		if (str[i] == '\0')
+		{
+			break;
+		}
 		_putchar(str[i]);
 	}
 	_putchar('\n');
