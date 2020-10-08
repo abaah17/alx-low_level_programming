@@ -1,4 +1,4 @@
-include "holberton.h"
+#include "holberton.h"
 
 /**
  * _puts - prints a string
@@ -6,10 +6,13 @@ include "holberton.h"
  */
 void _puts(char *str)
 {
-	while (*str)
+	for (int i = 0; str[i] != '\0'; ++i)
 	{
-		_putchar(*str);
-		str++;
+		if (str[i] == '\0')
+		{
+			break;
+		}
+		_putchar(str[i]);
 	}
 	_putchar('\n');
 }
