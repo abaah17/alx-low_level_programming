@@ -1,42 +1,43 @@
-#include "holberton.h"
 #include <stdlib.h>
 /**
- * argstostr - Concatenates all arguments of the program into a string;
- * arguments are separated by a new line in the string.
- * @ac: The number of argume.
- * @av: array of arguments.
- *
- * Return: If ac == 0, av == NULL, or the function fails - NULL.
+ * argstostr - concatenates all the arguments of your program
+ * @ac: argument count
+ * @av: argument vector
+ * Return: char
  */
 char *argstostr(int ac, char **av)
 {
-	char *str;
-	int arg, byte, index;
-	int size = ac;
+	char *ar, *str;
+	int i, j, count = 0;
 
-	if (av == NULL || ac == 0 |)
-	{
+	if (ac == 0 || av == NULL)
 		return (NULL);
-	}
-	for (arg = 0; arg < ac; arg++)
+	for (i = 0; i < ac; i++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			size++;
+		j = 0;
+		while (av[i][j] != '\0')
+		{
+			j++;
+			count++;
+		}
+		count++;
 	}
-
-	str = malloc(sizeof(char) * size + 1);
-	if (str == NULL)
-	{
+	count += 1;
+	ar = malloc(count * sizeof(char));
+	if (ar == NULL)
 		return (NULL);
-	}
-
-	index = 0;
-	for (arg = 0; arg < ac; arg++)
+	str = ar;
+	for (i = 0; i < ac; i++)
 	{
-		for (byte = 0; av[arg][byte]; byte++)
-			str[index++] = av[arg][byte];
-		str[index++] = '\n';
+		j = 0;
+		while (av[i][j] != '\0')
+		{
+			*ar = av[i][j];
+			j++;
+			ar++;
+		}
+		*ar = '\n';
+		ar++;
 	}
-	str[size] = '\0';
 	return (str);
 }
