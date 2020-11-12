@@ -1,21 +1,4 @@
 #include "holberton.h"
-/**
- * _strlen - function that returns the length of a string.
- *
- * @s: pointer to an string
- * Return: int
- */
-
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i += 1;
-	}
-	return (i);
-}
 
 /**
  * create_file - Create a file
@@ -24,7 +7,6 @@ int _strlen(char *s)
  * Description: function that create a file
  * Return: 1 on success, -1 on failure
  */
-
 
 int create_file(const char *filename, char *text_content)
 {
@@ -41,11 +23,16 @@ int create_file(const char *filename, char *text_content)
 	}
 	if (text_content)
 	{
-		_write = write(file_data, text_content, _strlen(text_content));
+		while (text_content[len_text])
+		{
+			len_text++;
+		}
+		_write = write(file_data, text_content, len_text);
 		if (_write == -1)
 		{
 			return (-1);
 		}
+
 	}
 	close(file_data);
 	return (1);

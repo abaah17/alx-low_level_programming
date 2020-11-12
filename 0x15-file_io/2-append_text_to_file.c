@@ -1,24 +1,6 @@
 #include "holberton.h"
 
 /**
- * _strlen - function that returns the length of a string.
- *
- * @s: pointer to an string
- * Return: int
- */
-
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i += 1;
-	}
-	return (i);
-}
-
-/**
  * append_text_to_file - appends text at the end of a file
  * @filename: name of the file
  * @text_content: he NULL terminated string to add at the end of the file
@@ -40,7 +22,11 @@ int append_text_to_file(const char *filename, char *text_content)
 	}
 	if (text_content)
 	{
-		_write = write(_file, text_content, _strlen(text_content));
+		while (text_content[text_len])
+		{
+			text_len++;
+		}
+		_write = write(_file, text_content, text_len);
 		if (_write == -1)
 		{
 			return (-1);
