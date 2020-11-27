@@ -2,48 +2,52 @@
 #include <stdio.h>
 #include "holberton.h"
 
-/**
- * _pow_recursion - function that returns the value of x
- * raised to the power of y
- * @x: base number
- * @y: pow number
- * Return: int
- */
+#include "holberton.h"
+#define BIT_SIZE 8
 
-int _pow_recursion(int x, int y)
+/**
+ * powX - powers a number b to the p's power
+ * @b : base
+ * @p : power
+ * Return: return b to the power of a
+ */
+unsigned long int powX(int b, int p)
 {
-	if (y < 0)
-		return (-1);
-	if (y == 0)
-		return (1);
-	return (x * _pow_recursion(x, y - 1));
+	unsigned long int ans = 1;
+
+	while (p)
+	{
+		ans *= b;
+		p--;
+	}
+	return (ans);
 }
 
 /**
- * print_binary - function that prints the binary representation of a number
- * @n: decimal number
- * Return: nothing
+ * print_binary - prints the binary representation of a number
+ * @n: input integer
  */
-
 void print_binary(unsigned long int n)
 {
-	unsigned int res_pow = 0;
-	int exp = 10;
-	int flag = 0;
+	unsigned long int test = powX(2, sizeof(unsigned long int) * BIT_SIZE - 1);
+	int start = 0;
 
 	if (n == 0)
-		_putchar('0');
-	while (exp >= 0)
 	{
-		res_pow = _pow_recursion(2, exp);
-		if (n >= res_pow)
+		_putchar('0');
+		return;
+	}
+	while (test)
+	{
+		if (!(test & n) && start)
+		{
+			_putchar('0');
+		}
+		else if (test & n)
 		{
 			_putchar('1');
-			n -= res_pow;
-			flag = 1;
+			start = 1;
 		}
-		else if (n < res_pow && flag == 1)
-			_putchar('0');
-		exp--;
-	}
+		test = test >>
+			}
 }
